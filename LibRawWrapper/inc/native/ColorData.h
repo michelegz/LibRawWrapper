@@ -111,10 +111,10 @@ namespace HurlbertVisionLab {
 				/// If RAW file does not contains this data, linear_max[] is set to zero.
 				/// Black value is not subtracted.
 				/// </remarks>
-				property array<long>^ PerChannelLinearMaximum
+				property array<unsigned int>^ PerChannelLinearMaximum
 				{
 					// in CLL+/CLI, long = int = Int32 (https://docs.microsoft.com/en-us/cpp/dotnet/managed-types-cpp-cli)
-					array<long>^ get() { return FixedToArray(m_colordata->linear_max, sizeof(m_colordata->linear_max), true); }
+					array<unsigned int>^ get() { return FixedToArray(m_colordata->linear_max, sizeof(m_colordata->linear_max), true); }
 				}
 
 				/// <summary>
